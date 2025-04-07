@@ -19,7 +19,7 @@ async fn main() {
     tracing_subscriber::fmt::init();
 
     // Initialize database connection
-    let db = db::connect_surrealdb().await;
+    let db = db::connect_surrealdb(settings.database.url.as_str()).await;
     tracing::info!("Connected to database");
 
     // Initialize the application state

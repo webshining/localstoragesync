@@ -1,7 +1,7 @@
 use surrealdb::Surreal;
-use surrealdb::engine::local::Db;
+use surrealdb::engine::any::Any;
 
 #[derive(Clone)]
 pub struct AppState {
-    pub db: Surreal<Db>,
+    pub db: Surreal<Any>,
 }
